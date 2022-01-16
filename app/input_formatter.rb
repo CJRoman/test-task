@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# InputFormatter
 class InputFormatter
   class << self
     def get_data(params)
@@ -8,7 +11,7 @@ class InputFormatter
     end
 
     def input_formatter_key(key)
-      /(?<result>\w+)(_format)/ =~ key.to_s
+      /(?<result>\w+)_format/ =~ key.to_s
       result
     end
 
@@ -17,7 +20,7 @@ class InputFormatter
     end
 
     def formatters_data(params)
-      params.select{|key, val| key.to_s =~ /_format$/}
+      params.select { |key, _val| key.to_s =~ /_format$/ }
     end
   end
 
