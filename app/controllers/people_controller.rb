@@ -4,6 +4,8 @@ class PeopleController
   end
 
   def normalize
+    people_data = InputFormatter.get_data(params).flatten
+    OutputFormatters::Formatter1.new(people_data).call
   end
 
   private

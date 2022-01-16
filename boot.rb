@@ -1,1 +1,6 @@
-require './app/people_controller.rb'
+require './app/input_formatter.rb'
+require './app/controllers/people_controller.rb'
+require './app/input_formatters/dollar_sign_input_formatter.rb'
+require './app/input_formatters/percent_sign_input_formatter.rb'
+require './app/output_formatters/formatter1.rb'
+require './app/models/person.rb'
